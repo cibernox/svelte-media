@@ -4,7 +4,7 @@
   "main": "dist/svelte-media.js",
   "module": "dist/svelte-media.mjs",
   "license": "MIT",
-  "description": "Svelte.js package to easily observe media queries as a reactive store",
+  "description": "Svelte.js util to easily observe media queries as a reactive store",
   "author": "Miguel Camba <miguel.camba@gmail.com>",
   "repository": "https://github.com/cibernox/svelte-media",
   "keywords": [
