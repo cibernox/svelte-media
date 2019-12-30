@@ -1,15 +1,17 @@
 {
-  "name": "svelte-matchmedia",
-  "version": "0.0.0",
-  "main": "dist/svelte-matchmedia.js",
-  "module": "dist/svelte-matchmedia.mjs",
+  "name": "svelte-media",
+  "version": "0.0.1",
+  "main": "dist/svelte-media.js",
+  "module": "dist/svelte-media.mjs",
   "license": "MIT",
-  "description": "",
+  "description": "Svelte.js package to easily observe media queries as a reactive store",
   "author": "Miguel Camba <miguel.camba@gmail.com>",
-  "repository": "https://github.com/cibernox/svelte-matchmedia",
+  "repository": "https://github.com/cibernox/svelte-media",
   "keywords": [
     "svelte",
+    "sapper",
     "media",
+    "query",
     "matchmedia",
     "responsive",
     "media-query"

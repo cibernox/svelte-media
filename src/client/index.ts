@@ -19,13 +19,13 @@ function calculateMedia(mqls: MediaQueryLists) {
   return media;
 }
 
-export default function(breakpoints: Record<string, string>) {
+export default function(mediaqueries: Record<string, string>) {
   return writable({}, set => {
     if (typeof window === "undefined") return;
     let mqls: MediaQueryLists = {};
     let updateMedia = () => set(calculateMedia(mqls));
-    for (let key in breakpoints) {
-      let foo = window.matchMedia(breakpoints[key]);
+    for (let key in mediaqueries) {
+      let foo = window.matchMedia(mediaqueries[key]);
       mqls[key] = foo;
       mqls[key].addEventListener("change", updateMedia);
     }
