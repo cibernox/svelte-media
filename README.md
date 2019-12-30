@@ -2,11 +2,14 @@
 
 > Easy way to observe for media queries as a store for your Svelte apps
 
-`svelte-media` helps you define the media queries you want to observe. By using [stores](https://svelte.dev/docs#svelte_store) to keep track of the matching state of the given media queries it notifies your app in the most efficient way when a change happens.
+`svelte-media` helps you define the media queries you want to observe. By using [stores](https://svelte.dev/docs#svelte_store) to keep track of the matching state of the given media queries it notifies your app in the most efficient way when a change happens. It works SSR environments where `window.matchMedia` is not available.
 
 ## Usage
 
-```
+The package's default export is a function that takes an object with named mediaquery strings and returns a svelte _store_ that you can export to
+consume any way you want.
+
+```js
 import watchMedia from "svelte-media";
 
 const mediaqueries = {
@@ -20,5 +23,40 @@ const mediaqueries = {
 };
 
 export const media = watchMedia(mediaqueries);
+```
+
+Given an object with mediaqueries, the returned object from that store will have boolean properties named
+after the media queries that indicate if they are a match or not, and a property named `classNames`that
+contains a name of the matching media queries prefixed by `media-` to use as convenient css classes in any element.
+
+For the example above the object might look like this:
+
+```js
+{
+  small: false
+  large: true
+  short: true
+  landscape: true
+  tiny: false
+  dark: true
+  noanimations : false,
+  classNames: 'media-large media-short media-landscape media-dark'
+}
+```
+
+As with any other store, you can subscribe to it in templates by prefixing it with `$`.
+
+```html
+<script>
+  import { media } from '../stores';
+</script>
+
+<div class="body l-body {$media.classNames}">
+  {if $media.large}
+	  <DesktopNav/>
+  {:else}
+	  <MobileNav/>
+  {/if}
+</div>
 ```
 
