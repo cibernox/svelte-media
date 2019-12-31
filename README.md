@@ -2,7 +2,13 @@
 
 > Easy way to observe for media queries as a store for your Svelte apps
 
-`svelte-media` helps you define the media queries you want to observe. By using [stores](https://svelte.dev/docs#svelte_store) to keep track of the matching state of the given media queries it notifies your app in the most efficient way when a change happens. It works SSR environments where `window.matchMedia` is not available.
+`svelte-media` helps you define the media queries you want to observe. By using [stores](https://svelte.dev/docs#svelte_store) to keep track of the matching state of the given media queries it notifies your app in the most efficient way when a change happens.
+
+It works SSR environments where `window.matchMedia` is not available, so it can be used in Sapper apps safely.
+
+## Instalation
+
+Just run `npm i --save-dev svelte-media` or `yarn add svelte-media`.
 
 ## Usage
 
