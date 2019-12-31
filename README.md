@@ -25,7 +25,7 @@ const mediaqueries = {
 export const media = watchMedia(mediaqueries);
 ```
 
-Given an object with mediaqueries, the returned object from that store will have boolean properties named
+Given an object with named media queries, the returned object from that store will have boolean properties named
 after the media queries that indicate if they are a match or not, and a property named `classNames`that
 contains a name of the matching media queries prefixed by `media-` to use as convenient css classes in any element.
 
@@ -59,4 +59,7 @@ As with any other store, you can subscribe to it in templates by prefixing it wi
   {/if}
 </div>
 ```
+
+You can create more than one store if, for instance, you want to keep media queries about screen size
+separated from, say those about pixel density, as the latter very rarely will fire an update.
 
