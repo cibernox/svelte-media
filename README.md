@@ -59,9 +59,9 @@ As with any other store, you can subscribe to it in templates by prefixing it wi
 
 <div class="body l-body {$media.classNames}">
   {if $media.large}
-	  <DesktopNav/>
+    <DesktopNav/>
   {:else}
-	  <MobileNav/>
+    <MobileNav/>
   {/if}
 </div>
 ```
