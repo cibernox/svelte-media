@@ -27,12 +27,12 @@ export default function(mediaqueries: Record<string, string>) {
     for (let key in mediaqueries) {
       let foo = window.matchMedia(mediaqueries[key]);
       mqls[key] = foo;
-      mqls[key].addEventListener("change", updateMedia);
+      mqls[key].addListener(updateMedia);
     }
     updateMedia();
     return () => {
       for (let key in mqls) {
-        mqls[key].removeEventListener("change", updateMedia);
+        mqls[key].removeListener(updateMedia);
       }
     };
   });
