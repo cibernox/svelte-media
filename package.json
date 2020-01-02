@@ -1,6 +1,6 @@
 {
   "name": "svelte-media",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/svelte-media.js",
   "module": "dist/svelte-media.mjs",
   "license": "MIT",
