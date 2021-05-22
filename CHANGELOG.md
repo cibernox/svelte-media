@@ -1,3 +1,7 @@
+## 0.0.3 (2021-05-22)
+
+
+
 ## [0.0.3](https://github.com/cibernox/svelte-media/compare/v0.0.2...v0.0.3) (2020-01-02)
 
 
