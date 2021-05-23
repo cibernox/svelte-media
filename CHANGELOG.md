@@ -1,3 +1,7 @@
+## [0.1.1](https://github.com/cibernox/svelte-media/compare/v0.1.0...v0.1.1) (2021-05-23)
+
+
+
 # [0.1.0](https://github.com/cibernox/svelte-media/compare/v0.0.4...v0.1.0) (2021-05-23)
 
 
