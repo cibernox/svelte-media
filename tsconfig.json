@@ -1,17 +1,16 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "noImplicitAny": true,
-    "sourceMap": false,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "target": "es2017",
-    "lib": ["es2018", "dom", "esnext"],
-    "outDir": "dist",
-    "types": ["svelte", "jest"],
-    "declaration": true
+    "module": "ESNext",
+    "target": "ESNext",
+    "declaration": true,
+    "strict": true,
+    "outDir": "./dist/modules",
+    "moduleResolution": "node"
   },
-  "exclude": ["node_modules/**/*", "dist"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules/**/*"
+  ]
 }

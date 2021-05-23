@@ -1,4 +1,4 @@
-import mediaFromBreakpoints from '../../src/client';
+import mediaFromBreakpoints from '../src';
 
 describe('mediaFromBreakpoints', () => {
   test('it exports a function that takes breakpoints and returns a store', () => {

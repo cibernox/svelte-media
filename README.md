@@ -31,8 +31,8 @@ const mediaqueries = {
 export const media = watchMedia(mediaqueries);
 ```
 
-Given an object with named media queries, the returned object from that store will have boolean properties named
-after the media queries that indicate if they are a match or not, and a property named `classNames`that
+Given an object with named media queries, the value of that store will have boolean properties named
+after the media queries that indicate if they are a match or not and a property named `classNames`that
 contains a name of the matching media queries prefixed by `media-` to use as convenient css classes in any element.
 
 For the example above the object might look like this:
