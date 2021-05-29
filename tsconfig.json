@@ -5,7 +5,8 @@
     "declaration": true,
     "strict": true,
     "outDir": "./dist/modules",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "declarationDir": "./dist"
   },
   "include": [
     "src"
