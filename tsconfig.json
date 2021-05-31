@@ -11,7 +11,11 @@
     "lib": ["es2018", "dom", "esnext"],
     "outDir": "dist",
     "types": ["svelte", "jest"],
-    "declaration": true
+    "declaration": true,
+    "declarationDir": "./dist"
   },
+  "include": [
+    "src"
+  ],
   "exclude": ["node_modules/**/*", "dist"]
 }

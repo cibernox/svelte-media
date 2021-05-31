@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "main": "dist/svelte-media.js",
   "module": "dist/svelte-media.mjs",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "description": "Svelte.js util to easily observe media queries as a reactive store",
   "author": "Miguel Camba <miguel.camba@gmail.com>",
