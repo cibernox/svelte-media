@@ -1,13 +1,15 @@
 import { writable } from "svelte/store";
 
-interface Media {
-  classNames: string,
-  [key: string]: string | boolean
-}
-type MediaQueryLists = Record<string, MediaQueryList>
+type Media<Query extends Record<string, string> = Record<string, string>> = {
+  [K in keyof Query]?: boolean | string;
+} & {
+  classNames: string;
+};
+
+type MediaQueryLists = Record<string, MediaQueryList>;
 
 function calculateMedia(mqls: MediaQueryLists) {
-  let media: Media = { classNames: '' };
+  let media: Media = { classNames: "" };
   let mediaClasses = [];
   for (let name in mqls) {
     media[name] = mqls[name].matches;
@@ -19,8 +21,8 @@ function calculateMedia(mqls: MediaQueryLists) {
   return media;
 }
 
-export default function(mediaqueries: Record<string, string>) {
-  return writable({}, set => {
+export default function<Query extends Record<string, string>>(mediaqueries: Query) {
+  return writable<Media<Query>>({ classNames: "" }, set => {
     if (typeof window === "undefined") return;
     let mqls: MediaQueryLists = {};
     let updateMedia = () => set(calculateMedia(mqls));
