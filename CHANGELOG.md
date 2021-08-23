@@ -1,3 +1,7 @@
+
+
+## [0.1.5](https://github.com/cibernox/svelte-media/compare/v0.1.4...v0.1.5) (2021-08-23)
+- Improve types of media query store for better TS/Intellisense errors.
 ## [0.1.4](https://github.com/cibernox/svelte-media/compare/v0.0.4...v0.1.4) (2021-05-31)
 
 
